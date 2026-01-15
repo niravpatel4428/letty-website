@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #737285;
+  --black100: #171717;
+  --champ-blue: #151433;
+  --titan-white: #F1EDFF;
+  --titan-white100: #F8F6FF;
+  --orange: #FF6B46;
+  --purple: #7350FF;
+  --gray100: #E3E1E1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-black100: var(--black100);
+  --color-champ-blue: var(--champ-blue);
+  --color-titan-white: var(--titan-white);
+  --color-titan-white100: var(--titan-white100);
+  --color-orange: var(--orange);
+  --color-purple: var(--purple);
+  --color-gray100: var(--gray100);
+  --font-inter: var(--font-inter);
+  --font-geist: var(--font-geist);
+
+  /* Updated fonts */
+  /* --font-sans: var(--font-inter); */
+  --font-body: var(--font-inter);
+
+
+  /* Custom breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+
+  /*  Custom font size */
+  --text-62: 62px;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 16px;
+  max-width: 100%;
+
+  @media (width >=480px) {
+    max-width: 100%;
+  }
+
+  @media (width >=640px) {
+    max-width: 100%;
+  }
+
+  @media (width >=768px) {
+    max-width: 720px;
+
+  }
+
+  @media (width >=1024px) {
+    max-width: 1024px;
+
+  }
+
+  @media (width >=1280px) {
+    max-width: 1200px;
+  }
+
+  @media (width >=1440px) {
+    max-width: 1332px;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  @apply text-base md:text-lg !leading-[160%];
+}
+
+b,
+strong {
+  font-weight: 600 !important;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+	transition: all ease-in-out 300ms;
+	-webkit-transition: all ease-in-out 300ms;
+	-ms-transition: all ease-in-out 300ms;
+	-o-transition: all ease-in-out 300ms;
+	-moz-transition: all ease-in-out 300ms;
+}
+
+p {
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+  @apply -tracking-[1%] lg:-tracking-[1.5%]
+}
+
+ol li,
+ul li {
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+.small-paragraph {
+  @apply text-[14px] md:text-base leading-tight;
+}
+
+/* main-title */
+.main-title {
+  @apply font-inter font-medium text-champ-blue text-3xl md:text-4xl lg:text-5xl xl:text-62 leading-tight md:leading-[110%] tracking-[-0.5px] md:tracking-[-1.5px] xl:tracking-[-3px];
+}
+
+.main-title * {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* main-title */
+
+/* section-title */
+.section-title {
+  @apply font-inter font-medium text-champ-blue text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-tight tracking-[-3px];
+}
+
+.section-title * {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* section-title */
+
+/* buttons */
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  @apply inline-flex items-center font-inter text-base leading-snug border border-transparent rounded-[100px] py-3 px-6 shadow-none gap-2.5;
+}
+
+.btn.btn-with-arrow {
+  @apply relative after:relative after:content-[''] after:w-4.5 after:h-3 after:bg-[url('/images/btn-arrow-white.svg')] after:bg-no-repeat after:[length:100%_100%];
+}
+
+.btn.btn-rounded-xl {
+  @apply rounded-xl;
+}
+
+.btn-white {
+  @apply text-black100 bg-white border-white hover:text-white hover:bg-orange hover:border-orange;
+}
+
+.btn-orange {
+  @apply text-white bg-orange border-orange hover:bg-purple hover:border-purple;
+}
+
+.btn-purple {
+  @apply text-white bg-purple border-purple hover:bg-orange hover:border-orange;
+}
+/* section-title */
