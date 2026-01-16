@@ -4,24 +4,38 @@
   --background: #ffffff;
   --foreground: #737285;
   --black100: #171717;
+  --black200: #696A6A;
+  --black300: #0A0A0A;
+  --black500: #1E2022;
   --champ-blue: #151433;
   --titan-white: #F1EDFF;
   --titan-white100: #F8F6FF;
+  --titan-white200: #F7F8FA;
+  --titan-white300: #FCFCFC;
+  --salomie: #FFD88D;
   --orange: #FF6B46;
   --purple: #7350FF;
   --gray100: #E3E1E1;
+  --gray200: #CACFD8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-black100: var(--black100);
+  --color-black200: var(--black200);
+  --color-black300: var(--black300);
+  --color-black500: var(--black500);
   --color-champ-blue: var(--champ-blue);
   --color-titan-white: var(--titan-white);
   --color-titan-white100: var(--titan-white100);
+  --color-titan-white200: var(--titan-white200);
+  --color-titan-white300: var(--titan-white300);
+  --color-salomie: var(--salomie);
   --color-orange: var(--orange);
   --color-purple: var(--purple);
   --color-gray100: var(--gray100);
+  --color-gray200: var(--gray200);
   --font-inter: var(--font-inter);
   --font-geist: var(--font-geist);
 
@@ -39,7 +53,14 @@
   --breakpoint-xxl: 1440px;
 
   /*  Custom font size */
+  --text-11: 11px;
+  --text-14: 14px;
+  --text-40: 40px;
   --text-62: 62px;
+
+  --radius-20: 20px;
+  --radius-50: 50px;
+  --radius-80: 80px;
 }
 
 @utility container {
@@ -77,7 +98,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  @apply text-base md:text-lg !leading-[160%];
+  @apply font-inter font-normal text-base md:text-lg !leading-[160%];
 }
 
 b,
@@ -116,12 +137,12 @@ ul li {
 }
 
 .small-paragraph {
-  @apply text-[14px] md:text-base leading-tight;
+  @apply text-14 md:text-base leading-tight;
 }
 
 /* main-title */
 .main-title {
-  @apply font-inter font-medium text-champ-blue text-3xl md:text-4xl lg:text-5xl xl:text-62 leading-tight md:leading-[110%] tracking-[-0.5px] md:tracking-[-1.5px] xl:tracking-[-3px];
+  @apply font-inter font-medium text-champ-blue text-3xl md:text-4xl lg:text-5xl xl:text-62 leading-tight md:leading-[110%] tracking-[-1px] xl:tracking-[-2px] xxl:tracking-[-3px];
 }
 
 .main-title * {
@@ -137,7 +158,7 @@ ul li {
 
 /* section-title */
 .section-title {
-  @apply font-inter font-medium text-champ-blue text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-tight tracking-[-3px];
+  @apply font-inter font-medium text-champ-blue text-3xl md:text-4xl xl:text-5xl leading-tight tracking-[-1px] xl:tracking-[-2px] xxl:tracking-[-3px];
 }
 
 .section-title * {
@@ -155,7 +176,11 @@ ul li {
 .btn {
   cursor: pointer;
   text-decoration: none;
-  @apply inline-flex items-center font-inter text-base leading-snug border border-transparent rounded-[100px] py-3 px-6 shadow-none gap-2.5;
+  @apply inline-flex items-center font-inter text-base leading-snug border border-transparent rounded-[100px] py-2 px-5 lg:py-3 lg:px-6 shadow-none gap-2.5;
+}
+
+.btn.btn-large {
+  @apply py-2 lg:py-3.5
 }
 
 .btn.btn-with-arrow {
@@ -178,3 +203,21 @@ ul li {
   @apply text-white bg-purple border-purple hover:bg-orange hover:border-orange;
 }
 /* section-title */
+
+/* custom-checkmark-list */
+.custom-checkmark-list ul {
+  @apply block list-none space-y-4 p-0 m-0;
+}
+
+.custom-checkmark-list ul li {
+  @apply relative block list-none pl-9 font-medium before:absolute before:content-[''] before:left-0 before:top-1 before:w-5 before:h-5;
+}
+
+.custom-checkmark-list.purple-checkmark ul li {
+  @apply before:bg-[url('/images/chekmark-circle-purple.svg')] before:bg-no-repeat before:bg-[length:100%_100%];
+}
+
+.custom-checkmark-list.orange-checkmark ul li {
+  @apply before:bg-[url('/images/chekmark-circle-orange.svg')] before:bg-no-repeat before:bg-[length:100%_100%];
+}
+/* custom-checkmark-list */

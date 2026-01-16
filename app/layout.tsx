@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 // import localFont from "next/font/local";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -51,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} ${inter.variable} antialiased font-normal`}>
+      <body className={`${geist.variable} ${inter.variable} antialiased`}>
         <Header/>
         {children}
         <Footer/>

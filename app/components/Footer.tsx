@@ -13,13 +13,13 @@ import {
 const Footer = () => {
     return (
         <>
-            <div className="block pt-8 md:pt-12.5">
+            <div className="block pt-4 md:pt-8 xl:pt-12.5">
                 <div className="block">
                     <div className="container">
                         <div className="block pt-8 md:pt-12 pb-3 md:pb-6">
-                            <div className="flex flex-wrap flex-col lg:flex-row gap-4">
-                                <div className="flex-none w-full lg:max-w-93">
-                                    <div className="block space-y-4">
+                            <div className="flex flex-wrap flex-col md:flex-row gap-4">
+                                <div className="flex-none w-full md:max-w-55 lg:max-w-93">
+                                    <div className="block text-center md:text-left space-y-4">
                                         <div className="block">
                                             <Link href="/" className='inline-block'>
                                                 <Image src="/images/logo.svg" alt="logo" width={150} height={22} className='max-w-full w-18 md:w-25' />
@@ -29,29 +29,29 @@ const Footer = () => {
                                             <p>AI digital workers for real estate</p>
                                         </div>
 
-                                        <div className="block mt-8">
-                                            <ul className="flex gap-2">
+                                        <div className="block mt-4 md:mt-6 lg:mt-8">
+                                            <ul className="flex flex-wrap justify-center md:justify-start gap-2">
                                                 <li>
-                                                    <Link href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-gray100 text-champ-blue hover:text-purple hover:bg-gray100 transition"><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                                    <Link href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-gray100 text-black200 hover:text-purple hover:bg-gray100 transition"><FontAwesomeIcon icon={faFacebookF} /></Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-gray100 text-champ-blue hover:text-purple hover:bg-gray100 transition"><FontAwesomeIcon icon={faTwitter} /></Link>
+                                                    <Link href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-gray100 text-black200 hover:text-purple hover:bg-gray100 transition"><FontAwesomeIcon icon={faTwitter} /></Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-gray100 text-champ-blue hover:text-purple hover:bg-gray100 transition"><FontAwesomeIcon icon={faLinkedinIn} /></Link>
+                                                    <Link href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-gray100 text-black200 hover:text-purple hover:bg-gray100 transition"><FontAwesomeIcon icon={faLinkedinIn} /></Link>
                                                 </li>
-                                                </ul>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex-none sm:flex-1">
-                                    <div className="flex flex-wrap flex-col sm:flex-row -mx-4">
-                                        <div className="flex-none w-full sm:w-1/3 px-4 mb-6">
+                                    <div className="flex flex-wrap flex-row -mx-4">
+                                        <div className="flex-none w-1/2 xs:w-1/3 px-4 mb-6">
                                             <div className="block">
-                                                <h6 className='font-medium text-xl leading-tight text-champ-blue mb-4'>Product</h6>
+                                                <h6 className='font-medium text-lg sm:text-xl leading-tight text-champ-blue mb-4'>Product</h6>
                                                 <div className="block small-paragraph">
                                                     <ul className='block list-none space-y-3'>
                                                         <li><Link href="#" className='hover:text-champ-blue'>Features</Link></li>
@@ -61,9 +61,9 @@ const Footer = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="flex-none w-full sm:w-1/3 px-4 mb-6">
+                                        <div className="flex-none w-1/2 xs:w-1/3 px-4 mb-6">
                                             <div className="block">
-                                                <h6 className='font-medium text-xl leading-tight text-champ-blue mb-4'>Company</h6>
+                                                <h6 className='font-medium text-lg sm:text-xl leading-tight text-champ-blue mb-4'>Company</h6>
                                                 <div className="block small-paragraph">
                                                     <ul className='block list-none space-y-3'>
                                                         <li><Link href="#" className='hover:text-champ-blue'>About Us</Link></li>
@@ -73,9 +73,9 @@ const Footer = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="flex-none w-full sm:w-1/3 px-4 mb-6">
+                                        <div className="flex-none w-1/2 xs:w-1/3 px-4 mb-6">
                                             <div className="block">
-                                                <h6 className='font-medium text-xl leading-tight text-champ-blue mb-4'>Resources</h6>
+                                                <h6 className='font-medium text-lg sm:text-xl leading-tight text-champ-blue mb-4'>Resources</h6>
                                                 <div className="block small-paragraph">
                                                     <ul className='block list-none space-y-3'>
                                                         <li><Link href="#" className='hover:text-champ-blue'>Privacy Policy</Link></li>

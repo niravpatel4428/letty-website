@@ -74,8 +74,7 @@ const Header = () => {
 
                     <div className="flex-none lg:flex-1">
                         {/* navigation-with-signin */}
-                        <div className={`transition-all duration-300
-            ${menuOpen ? "right-0 before:fixed before:content-[''] before:top-0 before:left-0 before:right-0 before:w-full before:h-19 md:before:h-21 before:bg-white" : "-right-full"} fixed -right-full top-0 bottom-0 w-full lg:w-auto h-full lg:h-auto lg:relative lg:right-0 block lg:flex lg:flex-wrap lg:gap-4 bg-white lg:bg-transparent pt-22 md:pt-30 pb-8 px-4 lg:p-0 overflow-auto`}>
+                        <div className={`transition-all duration-300 ${menuOpen ? "right-0 before:fixed before:content-[''] before:top-0 before:left-0 before:right-0 before:w-full before:h-19 md:before:h-21 before:bg-white" : "-right-full"} fixed -right-full top-0 bottom-0 w-full lg:w-auto h-full lg:h-auto lg:relative lg:right-0 block lg:flex lg:flex-wrap lg:gap-4 bg-white lg:bg-transparent pt-22 md:pt-30 pb-8 px-4 lg:p-0 overflow-auto`}>
                             {/* Navigation */}
                             <div className="flex-none lg:flex-1">
                                 <nav className="flex lg:justify-center items-center bg-white lg:bg-transparent">
