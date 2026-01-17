@@ -238,18 +238,12 @@ ul li {
 /* future-employees-carousel */
 .future-employees-carousel {
   opacity: 0;
-  position: unset;
+  position: unset !important;
 }
 
 .future-employees-carousel.slick-initialized {
   opacity: 1;
 }
-
-/* .future-employees-carousel .slick-arrow {
-  position: absolute;
-  max-width: 1300px;
-  margin: 0 auto;
-} */
 
 .future-employees-carousel .slick-arrow.slick-disabled {
   cursor: default !important;

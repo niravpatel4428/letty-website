@@ -13,7 +13,7 @@ const FutureEmployeesNextArrow = (props: any) => {
 
     return (
         <div className='absolute bottom-0 left:0 right-0 w-full'>
-            <div className="container px-0 xs:pr-4">
+            <div className="container">
                 {/* <button onClick={onClick} aria-label="Next slide" className="relative group cursor-pointer flex items-center justify-center w-10 h-10 rounded-full border-2 border-purple text-purple hover:bg-purple hover:text-white transition"> */}
                 <button onClick={onClick} aria-label="Next slide" className={`${className} relative group cursor-pointer flex items-center justify-center w-10 h-10 rounded-full border-2 border-purple text-purple hover:bg-purple hover:text-white transition ml-auto`}>
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="stroke-current" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@ const FutureEmployeesPrevArrow = (props: any) => {
 
     return (
         <div className='absolute bottom-0 left:0 right-0 w-full'>
-            <div className="container pl-0">
+            <div className="container">
                 <button onClick={onClick} aria-label="Previous slide" className={`${className} relative group cursor-pointer z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 border-purple text-purple hover:bg-purple hover:text-white transition`}>
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="stroke-current" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.8467 6.31835H0.790039M0.790039 6.31835L6.31835 11.8467M0.790039 6.31835L6.31835 0.790039" strokeWidth="1.57952" strokeLinecap="round" strokeLinejoin="round" />
