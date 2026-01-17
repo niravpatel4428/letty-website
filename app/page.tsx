@@ -23,6 +23,8 @@ export default function Home() {
         backgroundImage="/images/home-banner-bg.png"
         bannerImage="/images/home-banner-image.png"
         contentMaxWidth="max-w-292"
+        descriptionMaxWidth="max-w-160"
+        titleMaxWidth="max-w-251"
       />
       <HumanWork />
       <AgentTeam />
@@ -30,7 +32,12 @@ export default function Home() {
       <EnquiryRevenue />
       <DoublingHeadcount />
       <ClientsLive />
-      <ExistingTools/>
+      <ExistingTools
+        title="Integrates with your existing tools"
+        titleTag="h2"
+        description="Seamlessly connect to your CRM, communication channels, and property management systems."
+        contentMaxWidth="max-w-full"
+      />
       <QuestionAnswered/>
       <TicketsHandle/>
     </main>

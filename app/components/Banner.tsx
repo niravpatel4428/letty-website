@@ -18,6 +18,12 @@ type BannerProps = {
   /** Custom max-width class */
   contentMaxWidth?: string; // e.g. "max-w-292", "max-w-5xl", "max-w-[900px]"
 
+  /** Custom description max-width */
+  descriptionMaxWidth?: string; // e.g. "max-w-160", "max-w-xl", "max-w-[700px]"
+
+  /** Custom main title max-width */
+  titleMaxWidth?: string; // e.g. "max-w-200", "max-w-4xl", "max-w-[800px]"
+
   /** Dynamic title tag */
   titleTag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
@@ -35,6 +41,8 @@ const Banner = ({
   backgroundImage,
   bannerImage,
   contentMaxWidth,
+  descriptionMaxWidth,
+  titleMaxWidth,
   titleTag = "h1", // default tag
 }: BannerProps) => {
   const hasTextContent =
@@ -54,7 +62,7 @@ const Banner = ({
       >
         {/* Overlay */}
         {backgroundImage && (
-          <div className="absolute left-0 right-0 bottom-0 bg-linear-to-b from-[#F9FBFC]/0 to-[#F9FBFC] w-full h-16 sm:h-30 md:h-50 xl:h-80" />
+          <div className="absolute left-0 right-0 bottom-0 bg-linear-to-b from-[#F9FBFC]/0 to-[#F9FBFC] w-full h-16 sm:h-30 md:h-50 xl:h-80 z-9" />
         )}
 
         <div className="block">
@@ -66,7 +74,9 @@ const Banner = ({
                   contentMaxWidth ?? ""
                 }`}
               >
-                <div className="flex flex-col items-center justify-center gap-4 xl:gap-6">
+                {/* Main Title Part */}
+                {/* <div className="flex flex-col items-center justify-center gap-4 xl:gap-6"> */}
+                <div className={`flex flex-col items-center justify-center w-full mx-auto gap-4 xl:gap-6 ${titleMaxWidth}`}>
                   {/* Subtitle */}
                   {subTitleText && (
                     <span className="common-sub-title inline-flex items-center gap-2 capitalize font-inter text-champ-blue text-14 sm:text-base md:tracking-[-0.5px] bg-white border border-titan-white rounded-4xl py-2 px-5">
@@ -92,7 +102,7 @@ const Banner = ({
 
                   {/* Description */}
                   {description && (
-                    <div className="block small-paragraph">
+                    <div className={`block small-paragraph !leading-normal mx-auto ${descriptionMaxWidth}`} >
                       <p>{description}</p>
                     </div>
                   )}
@@ -109,18 +119,12 @@ const Banner = ({
                     </div>
                   )}
                 </div>
+                {/* Main Title Part */}
 
                 {/* Banner Image */}
                 {bannerImage && (
                   <div className="mt-10 md:mt-14 xl:mt-17.5">
-                    <Image
-                      src={bannerImage}
-                      alt="banner-image"
-                      width={1920}
-                      height={900}
-                      className="w-full max-w-full"
-                      priority
-                    />
+                    <Image src={bannerImage} alt="banner-image" width={1920} height={900} className="w-full max-w-full" priority />
                   </div>
                 )}
               </div>

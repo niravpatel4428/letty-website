@@ -30,23 +30,23 @@ const Header = () => {
 
         const isActive = pathname === path;
 
-        // Active: Negotiator Nancy
-        if (isActive && path === "/negotiator-nancy") {
+        // Active: Nancy
+        if (isActive && path === "/nancy") {
             return `${base} font-semibold text-purple bg-purple/10`;
         }
 
-        // Active: Property Manager Pete
-        if (isActive && path === "/property-manager-pete") {
+        // Active: Pete
+        if (isActive && path === "/pete") {
             return `${base} font-semibold text-orange bg-orange/10`;
         }
 
-        // Hover: Negotiator Nancy
-        if (!isActive && path === "/negotiator-nancy") {
+        // Hover: Nancy
+        if (!isActive && path === "/nancy") {
             return `${base} text-champ-blue hover:text-purple hover:bg-purple/10`;
         }
 
-        // Hover: Property Manager Pete
-        if (!isActive && path === "/property-manager-pete") {
+        // Hover: Pete
+        if (!isActive && path === "/pete") {
             return `${base} text-champ-blue hover:text-orange hover:bg-orange/10`;
         }
 
@@ -79,8 +79,8 @@ const Header = () => {
                             <div className="flex-none lg:flex-1">
                                 <nav className="flex lg:justify-center items-center bg-white lg:bg-transparent">
                                     <ul className="flex lg:inline-flex flex-col lg:flex-row flex-wrap lg:items-center justify-center lg:p-1 w-full lg:w-auto lg:border border-titan-white rounded-4xl bg-white">
-                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/negotiator-nancy" className={getNavLinkClass("/negotiator-nancy")}>Negotiator Nancy</Link></li>
-                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/property-manager-pete" className={getNavLinkClass("/property-manager-pete")}>Property Manager Pete</Link></li>
+                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/negotiator-nancy" className={getNavLinkClass("/nancy")}>Negotiator Nancy</Link></li>
+                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/property-manager-pete" className={getNavLinkClass("/pete")}>Property Manager Pete</Link></li>
                                     </ul>
                                 </nav>
                             </div>
