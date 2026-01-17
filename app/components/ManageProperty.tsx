@@ -21,7 +21,7 @@ const ManageProperty = () => {
                             </div>
                             <div className="flex-none w-full lg:w-1/2 xl:w-153 px-4">
                                 <div className="block">
-                                    <Image src='/images/manage-property-img.png' width={612} height={450} className='max-w-full w-full' />
+                                    <Image src='/images/manage-property-img.png' width={612} height={450} className='max-w-full w-full' alt='Property management illustration showing chaos management' />
                                 </div>
                             </div>
                         </div>
