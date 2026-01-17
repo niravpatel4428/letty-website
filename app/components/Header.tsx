@@ -79,8 +79,8 @@ const Header = () => {
                             <div className="flex-none lg:flex-1">
                                 <nav className="flex lg:justify-center items-center bg-white lg:bg-transparent">
                                     <ul className="flex lg:inline-flex flex-col lg:flex-row flex-wrap lg:items-center justify-center lg:p-1 w-full lg:w-auto lg:border border-titan-white rounded-4xl bg-white">
-                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/negotiator-nancy" className={getNavLinkClass("/nancy")}>Negotiator Nancy</Link></li>
-                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/property-manager-pete" className={getNavLinkClass("/pete")}>Property Manager Pete</Link></li>
+                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/nancy" className={getNavLinkClass("/nancy")}>Negotiator Nancy</Link></li>
+                                        <li className="border-b border-titan-white lg:border-0 last:border-0"><Link href="/pete" className={getNavLinkClass("/pete")}>Property Manager Pete</Link></li>
                                     </ul>
                                 </nav>
                             </div>
