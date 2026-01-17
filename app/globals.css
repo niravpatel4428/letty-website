@@ -7,11 +7,13 @@
   --black200: #696A6A;
   --black300: #0A0A0A;
   --black500: #1E2022;
+  --black600: #162029;
   --champ-blue: #151433;
   --titan-white: #F1EDFF;
   --titan-white100: #F8F6FF;
   --titan-white200: #F7F8FA;
   --titan-white300: #FCFCFC;
+  --titan-white400: #CCCCE9;
   --salomie: #FFD88D;
   --orange: #FF6B46;
   --purple: #7350FF;
@@ -26,11 +28,13 @@
   --color-black200: var(--black200);
   --color-black300: var(--black300);
   --color-black500: var(--black500);
+  --color-black600: var(--black600);
   --color-champ-blue: var(--champ-blue);
   --color-titan-white: var(--titan-white);
   --color-titan-white100: var(--titan-white100);
   --color-titan-white200: var(--titan-white200);
   --color-titan-white300: var(--titan-white300);
+  --color-titan-white400: var(--titan-white400);
   --color-salomie: var(--salomie);
   --color-orange: var(--orange);
   --color-purple: var(--purple);
@@ -54,6 +58,7 @@
 
   /*  Custom font size */
   --text-11: 11px;
+  --text-13: 13px;
   --text-14: 14px;
   --text-40: 40px;
   --text-62: 62px;
@@ -205,12 +210,16 @@ ul li {
 /* section-title */
 
 /* custom-checkmark-list */
+.custom-checkmark-list {
+  @apply font-medium;
+}
+
 .custom-checkmark-list ul {
   @apply block list-none space-y-4 p-0 m-0;
 }
 
 .custom-checkmark-list ul li {
-  @apply relative block list-none pl-9 font-medium before:absolute before:content-[''] before:left-0 before:top-1 before:w-5 before:h-5;
+  @apply relative block list-none pl-7 md:pl-9 before:absolute before:content-[''] before:left-0 before:top-0.5 md:before:top-1 before:w-5 before:h-5;
 }
 
 .custom-checkmark-list.purple-checkmark ul li {
@@ -220,4 +229,143 @@ ul li {
 .custom-checkmark-list.orange-checkmark ul li {
   @apply before:bg-[url('/images/chekmark-circle-orange.svg')] before:bg-no-repeat before:bg-[length:100%_100%];
 }
+
+.custom-checkmark-list.simple-blue-checkmark ul li {
+  @apply before:bg-[url('/images/chekmark-circle-simple-blue.svg')] before:bg-no-repeat before:bg-[length:100%_100%];
+}
 /* custom-checkmark-list */
+
+/* future-employees-carousel */
+.future-employees-carousel {
+  opacity: 0;
+  position: unset;
+}
+
+.future-employees-carousel.slick-initialized {
+  opacity: 1;
+}
+
+/* .future-employees-carousel .slick-arrow {
+  position: absolute;
+  max-width: 1300px;
+  margin: 0 auto;
+} */
+
+.future-employees-carousel .slick-arrow.slick-disabled {
+  cursor: default !important;
+  color: var(--titan-white400) !important;
+  border-color: var(--titan-white400) !important;
+  background: transparent !important;
+}
+
+.future-employees-carousel .slick-dots {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 2px;
+  padding-left: 50px;
+  padding-right: 50px;
+  z-index: 99;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.future-employees-carousel .slick-dots li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7px 3px;
+  /* width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%; */
+}
+
+/* .future-employees-carousel .slick-dots li:before {
+  position: relative;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--titan-white400);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+} */
+
+.future-employees-carousel .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.future-employees-carousel .slick-dots li button:before {
+  position: relative;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--titan-white400);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* .future-employees-carousel .slick-dots li.slick-active, */
+.future-employees-carousel .slick-dots li.slick-active button {
+  border-color: var(--purple);
+}
+
+/* .future-employees-carousel .slick-dots li.slick-active:before, */
+.future-employees-carousel .slick-dots li.slick-active button:before {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.future-employees-carousel .slick-track {
+  display: flex;
+  justify-content: center;
+}
+
+.future-employees-carousel .slick-list {
+  margin: 0 -12px;
+  padding-left: 0 !important;
+  /* padding-right: 122px !important; */
+}
+
+.future-employees-carousel .slick-slide {
+  height: inherit;
+  padding: 0 12px;
+}
+
+.future-employees-carousel .slick-slide > div {
+  height: 100%;
+}
+
+@media(max-width:1024px){
+.future-employees-carousel .slick-list { margin: 0 -7px; }
+.future-employees-carousel .slick-slide { padding: 0 7px; }
+.future-employees-carousel .slick-dots { padding-top: 45px; }
+}
+
+@media(max-width:767px){
+.future-employees-carousel .slick-dots { padding-top: 30px; }
+}
+/* future-employees-carousel */

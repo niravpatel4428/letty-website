@@ -2,6 +2,7 @@ import Image from "next/image";
 import Banner from "./components/Banner";
 import HumanWork from "./components/HumanWork";
 import AgentTeam from "./components/AgentTeam";
+import FutureEmployees from "./components/FutureEmployees";
 import EnquiryRevenue from "./components/EnquiryRevenue";
 import DoublingHeadcount from "./components/DoublingHeadcount";
 import ClientsLive from "./components/ClientsLive";
@@ -23,9 +24,9 @@ export default function Home() {
         bannerImage="/images/home-banner-image.png"
         contentMaxWidth="max-w-292"
       />
-
       <HumanWork />
       <AgentTeam />
+      <FutureEmployees />
       <EnquiryRevenue />
       <DoublingHeadcount />
       <ClientsLive />

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 
 const EnquiryRevenue = () => {
@@ -47,20 +46,16 @@ const EnquiryRevenue = () => {
 
     return (
         <>
-            <div className="block py-12 md:py-18 xl:py-25 relative">
-                {/* <div className="absolute left-0 right-0 bottom-16 text-center">
-                    <Image src="/images/enquiry-revenue-bottom-icons-bg.png" alt="enquiry-revenue-bg" width={1008} height={72} className="max-w-252 w-full mx-auto" />
-                </div> */}
+            <div className="block pt-12 md:pt-18 xl:pt-25 pb-20 md:pb-25 lg:pb-30 xl:pb-40 relative">
+                <div className="absolute left-0 right-0 bottom-10 lg:bottom-16 text-center -z-1">
+                    <Image src="/images/enquiry-revenue-bottom-icons-bg.png" alt="enquiry-revenue-bg" width={1008} height={72} className="max-w-full sm:max-w-120 md:max-w-150 xl:max-w-252 w-full mx-auto" />
+                </div>
                 <div className="container">
-                    <div className="block">
+                    <div className="block relative z-9">
                         {/* Section Heading */}
                         <div className="block space-y-3 text-center mb-8">
-                            <div className="section-title">
+                            <div className="section-title !m-0">
                                 <h2>Turn every enquiry into revenue. <strong>Automatically</strong>.</h2>
-                            </div>
-
-                            <div className="block text-white">
-                                <p>Letty handles the grunt work. Your team handles the closing.</p>
                             </div>
                         </div>
 
@@ -72,7 +67,7 @@ const EnquiryRevenue = () => {
                                     <li>
                                         <button
                                             onClick={() => setActiveTab("sales")}
-                                            className={`cursor-pointer inline-flex items-center justify-center text-base py-4 px-7 rounded-full transition-all duration-300
+                                            className={`cursor-pointer inline-flex items-center justify-center text-base py-2 md:py-4 px-5 md:px-7 rounded-full transition-all duration-300
                                             ${
                                                 activeTab === "sales"
                                                 ? "text-white bg-purple"
@@ -86,7 +81,7 @@ const EnquiryRevenue = () => {
                                     <li>
                                         <button
                                             onClick={() => setActiveTab("property")}
-                                            className={`cursor-pointer inline-flex items-center justify-center text-base py-4 px-7 rounded-full transition-all duration-300
+                                            className={`cursor-pointer inline-flex items-center justify-center text-base py-2 md:py-4 px-5 md:px-7 rounded-full transition-all duration-300
                                             ${
                                                 activeTab === "property"
                                                 ? "text-white bg-orange"
@@ -105,8 +100,8 @@ const EnquiryRevenue = () => {
                                 {/* Sales Teams */}
                                 {activeTab === "sales" && (
                                     <div className="block">
-                                        <div className="flex flex-wrap md:items-center -mx-4 lg:-mx-8">
-                                            <div className="flex-none w-full md:w-1/2 px-4 lg:px-8">
+                                        <div className="flex flex-wrap md:items-center -mx-4 xl:-mx-8">
+                                            <div className="flex-none w-full lg:w-1/2 px-4 xl:px-8">
                                                 <div className="block space-y-4 md:space-y-8">
                                                     <div className="block space-y-3">
                                                         <div className="section-title">
@@ -126,11 +121,11 @@ const EnquiryRevenue = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex-none w-full md:w-1/2 px-4 lg:px-8">
+                                            <div className="flex-none w-full lg:w-1/2 px-4 xl:px-8">
                                                 {/* Sales Right List Items */}
-                                                <div className="block space-y-4">
+                                                <div className="block space-y-4 mt-8 lg:mt-0">
                                                     {salesSteps.map((item, index) => (
-                                                    <div key={index} className="flex gap-4 p-5 items-center bg-white shadow-[0px_1px_14.8px_rgba(0,0,0,0.08)] rounded-xl" >
+                                                    <div key={index} className="flex gap-4 p-3 lg:p-5 items-center bg-white shadow-[0px_1px_14.8px_rgba(0,0,0,0.08)] rounded-xl" >
                                                         <div className="flex-none">
                                                             <div className="block w-8 h-8">
                                                                 <Image src={item.icon} alt="tab-icon" width={32} height={32} className="max-w-full max-h-full" />
@@ -155,7 +150,7 @@ const EnquiryRevenue = () => {
                                 {activeTab === "property" && (
                                     <div className="block">
                                         <div className="flex flex-wrap md:items-center -mx-4 lg:-mx-8">
-                                            <div className="flex-none w-full lg:w-1/2 px-4 lg:px-8 mb-8">
+                                            <div className="flex-none w-full lg:w-1/2 px-4 lg:px-8">
                                                 <div className="block space-y-4 md:space-y-8">
                                                     <div className="block space-y-3">
                                                         <div className="section-title">
@@ -175,11 +170,11 @@ const EnquiryRevenue = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex-none w-full lg:w-1/2 px-4 lg:px-8 mb-8">
+                                            <div className="flex-none w-full lg:w-1/2 px-4 lg:px-8">
                                                 {/* Property Right List Items */}
-                                                <div className="block space-y-4">
+                                                <div className="block space-y-4 mt-8 lg:mt-0">
                                                     {propertySteps.map((item, index) => (
-                                                    <div key={index} className="flex gap-4 p-5 items-center bg-white shadow-[0px_1px_14.8px_rgba(0,0,0,0.08)] rounded-xl" >
+                                                    <div key={index} className="flex gap-4 p-3 lg:p-5 items-center bg-white shadow-[0px_1px_14.8px_rgba(0,0,0,0.08)] rounded-xl" >
                                                         <div className="flex-none">
                                                             <div className="block w-8 h-8">
                                                                 <Image src={item.icon} alt="tab-icon" width={32} height={32} className="max-w-full max-h-full" />
