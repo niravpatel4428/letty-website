@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner';
 import WhereYouWork from '../components/WhereYouWork';
+import ClosedDealSteps from '../components/ClosedDealSteps';
 import ManageProperty from '../components/ManageProperty';
 import TicketProperties from '../components/TicketProperties';
 import TicketResolution from '../components/TicketResolution';
@@ -44,6 +45,7 @@ const page = () => {
                     { src: "/images/nancy-work-logo11.svg", width: 99, height: 25 },
                 ]}
             />
+            <ClosedDealSteps/>
             <ManageProperty
                 title = "Your best deals are hiding in conversations you've already had"
 

@@ -15,11 +15,13 @@
   --titan-white300: #FCFCFC;
   --titan-white400: #CCCCE9;
   --titan-white500: #F5F5F5;
+  --titan-white600: #F1F1F1;
   --salomie: #FFD88D;
   --orange: #FF6B46;
   --purple: #7350FF;
   --gray100: #E3E1E1;
   --gray200: #CACFD8;
+  --gray300: #E0E0E0;
 }
 
 @theme inline {
@@ -37,11 +39,13 @@
   --color-titan-white300: var(--titan-white300);
   --color-titan-white400: var(--titan-white400);
   --color-titan-white500: var(--titan-white500);
+  --color-titan-white600: var(--titan-white600);
   --color-salomie: var(--salomie);
   --color-orange: var(--orange);
   --color-purple: var(--purple);
   --color-gray100: var(--gray100);
   --color-gray200: var(--gray200);
+  --color-gray300: var(--gray300);
   --font-inter: var(--font-inter);
   --font-geist: var(--font-geist);
 
@@ -68,7 +72,10 @@
   --radius-18: 18px;
   --radius-20: 20px;
   --radius-50: 50px;
+  --radius-58: 58px;
   --radius-80: 80px;
+
+  --border-5: 5px;
 }
 
 @utility container {
