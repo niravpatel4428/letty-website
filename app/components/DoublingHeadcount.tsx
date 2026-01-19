@@ -34,7 +34,7 @@ const DoublingHeadcount = () => {
         <div className="block">
           {/* Heading */}
           <div className="block space-y-3 text-center mb-8 lg:mb-15">
-              <div className="section-title !text-white">
+              <div className="section-title text-white!">
                   <h2>It’s like doubling your <strong>headcount</strong></h2>
               </div>
 
@@ -53,7 +53,7 @@ const DoublingHeadcount = () => {
                   return (
                       <div key={index} className="flex-none w-full xs:w-1/2 md:w-1/3 px-4 mb-8">
                           <div className="flex flex-col justify-between gap-5 md:gap-8 xl:gap-12.5 h-full border-l-2 border-white pl-5 lg:pl-7">
-                              <div className="main-title !font-normal !text-white">
+                              <div className="main-title font-normal! text-white!">
                                   <h3><span>{item.value}</span> {item.suffix}</h3>
                               </div>
 

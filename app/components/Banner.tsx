@@ -102,7 +102,7 @@ const Banner = ({
 
                   {/* Description */}
                   {description && (
-                    <div className={`block small-paragraph !leading-normal mx-auto ${descriptionMaxWidth}`} >
+                    <div className={`block small-paragraph leading-normal! mx-auto ${descriptionMaxWidth}`} >
                       <p>{description}</p>
                     </div>
                   )}

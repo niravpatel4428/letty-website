@@ -11,7 +11,7 @@ const ManageProperty = () => {
                             <div className="flex-none xl:flex-1 w-full lg:w-1/2 xl:w-full px-4">
                                 <div className="block space-y-6 mb-8 lg:mb-0">
                                     <div className="section-title">
-                                        <h2>Your PMs don&apos;t manage properties. They manage <strong className='!text-orange'>chaos</strong></h2>
+                                        <h2>Your PMs don&apos;t manage properties. They manage <strong className='text-orange!'>chaos</strong></h2>
                                     </div>
 
                                     <div className="block">

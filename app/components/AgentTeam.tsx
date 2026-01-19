@@ -28,14 +28,12 @@ const AgentTeam = () => {
             <div className="container">
                 <div className="block">
                     <div className="block space-y-3 text-center mb-8 lg:mb-12">
-                        <div className="section-title !text-white">
-                        <h2>
-                            Turn every agent into a <strong>team of 10</strong>
-                        </h2>
+                        <div className="section-title text-white!">
+                            <h2>Turn every agent into a <strong>team of 10</strong></h2>
                         </div>
 
                         <div className="block text-white">
-                        <p>Letty handles the grunt work. Your team handles the closing.</p>
+                            <p>Letty handles the grunt work. Your team handles the closing.</p>
                         </div>
                     </div>
 

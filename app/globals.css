@@ -14,6 +14,7 @@
   --titan-white200: #F7F8FA;
   --titan-white300: #FCFCFC;
   --titan-white400: #CCCCE9;
+  --titan-white500: #F5F5F5;
   --salomie: #FFD88D;
   --orange: #FF6B46;
   --purple: #7350FF;
@@ -35,6 +36,7 @@
   --color-titan-white200: var(--titan-white200);
   --color-titan-white300: var(--titan-white300);
   --color-titan-white400: var(--titan-white400);
+  --color-titan-white500: var(--titan-white500);
   --color-salomie: var(--salomie);
   --color-orange: var(--orange);
   --color-purple: var(--purple);
@@ -63,6 +65,7 @@
   --text-40: 40px;
   --text-62: 62px;
 
+  --radius-18: 18px;
   --radius-20: 20px;
   --radius-50: 50px;
   --radius-80: 80px;
@@ -103,7 +106,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  @apply font-inter font-normal text-base md:text-lg !leading-[160%];
+  @apply font-inter font-normal text-base md:text-lg leading-[160%]!;
 }
 
 b,
@@ -176,6 +179,22 @@ ul li {
   margin-bottom: 0;
 }
 /* section-title */
+
+/* block-title */
+.block-title {
+  @apply font-inter font-medium text-champ-blue text-2xl md:text-3xl xl:text-4xl leading-tight tracking-[-1px] xl:tracking-[-2px] xxl:tracking-[-3px];
+}
+
+.block-title * {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* block-title */
 
 /* buttons */
 .btn {
@@ -260,7 +279,7 @@ ul li {
   padding-right: 50px;
   z-index: 99;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 0 auto 0 0;
 }
 
 .future-employees-carousel .slick-dots li {

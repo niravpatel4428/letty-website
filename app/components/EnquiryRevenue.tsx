@@ -54,7 +54,7 @@ const EnquiryRevenue = () => {
                     <div className="block relative z-9">
                         {/* Section Heading */}
                         <div className="block space-y-3 text-center mb-8">
-                            <div className="section-title !m-0">
+                            <div className="section-title m-0!">
                                 <h2>Turn every enquiry into revenue. <strong>Automatically</strong>.</h2>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const EnquiryRevenue = () => {
                                                 <div className="block space-y-4 md:space-y-8">
                                                     <div className="block space-y-3">
                                                         <div className="section-title">
-                                                            <h2>One AI. <strong className="!text-purple">The entire sales workflow</strong></h2>
+                                                            <h2>One AI. <strong className="text-purple!">The entire sales workflow</strong></h2>
                                                         </div>
                                                         <div className="block">
                                                             <p>Nancy handles everything. From first enquiry to booked viewing to mortgage referrals. No manual follow-up. No leads slipping through</p>
@@ -154,7 +154,7 @@ const EnquiryRevenue = () => {
                                                 <div className="block space-y-4 md:space-y-8">
                                                     <div className="block space-y-3">
                                                         <div className="section-title">
-                                                            <h2>One AI. <strong className="!text-orange">The entire maintenance workflow</strong></h2>
+                                                            <h2>One AI. <strong className="text-orange!">The entire maintenance workflow</strong></h2>
                                                         </div>
                                                         <div className="block">
                                                             <p>Pete handles everything. From tenant issue to resolved ticket. Triages, coordinates contractors, updates landlords. Your PMs only step in when it matters.</p>

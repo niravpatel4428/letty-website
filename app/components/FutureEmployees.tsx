@@ -117,7 +117,7 @@ const FutureEmployees = () => {
                                                         <h2>Negotiator Nancy</h2>
                                                     </div>
 
-                                                    <div className="block small-paragraph !leading-normal">
+                                                    <div className="block small-paragraph leading-normal!">
                                                         <p>Every enquiry answered. Every viewing booked. Even before your team starts their day.</p>
                                                     </div>
                                                 </div>
@@ -135,7 +135,7 @@ const FutureEmployees = () => {
                                         <div className="flex-none w-full lg:w-1/2 px-4">
                                             <div className="block max-w-103 w-full bg-titan-white100 border border-purple py-6 px-4 xl:py-8 xl:px-6 rounded-2xl mt-8 xl:mt-0 mr-auto lg:mr-0 ml-auto">
                                                 <div className="block space-y-8">
-                                                    <div className="block custom-checkmark-list simple-blue-checkmark text-champ-blue !font-normal">
+                                                    <div className="block custom-checkmark-list simple-blue-checkmark text-champ-blue font-normal!">
                                                         <ul>
                                                             <li>Catches mortgage & instruction opportunities</li>
                                                             <li>Responds in under 60 seconds. 24/7</li>
@@ -170,7 +170,7 @@ const FutureEmployees = () => {
                                                         <h2>Property Manager</h2>
                                                     </div>
 
-                                                    <div className="block small-paragraph !leading-normal">
+                                                    <div className="block small-paragraph leading-normal!">
                                                         <p>Every ticket triaged. Every repair coordinated. Before your PM even opens their inbox</p>
                                                     </div>
                                                 </div>
@@ -188,7 +188,7 @@ const FutureEmployees = () => {
                                         <div className="flex-none w-full lg:w-1/2 px-4">
                                             <div className="block max-w-103 w-full bg-titan-white100 border border-purple py-6 px-4 xl:py-8 xl:px-6 rounded-2xl mt-8 xl:mt-0 mr-auto lg:mr-0 ml-auto">
                                                 <div className="block space-y-8">
-                                                    <div className="block custom-checkmark-list simple-blue-checkmark text-champ-blue !font-normal">
+                                                    <div className="block custom-checkmark-list simple-blue-checkmark text-champ-blue font-normal!">
                                                         <ul>
                                                             <li>Streamline operations with Property Manager Pete</li>
                                                             <li>Handles tenant queries and maintenance requests instantly</li>
