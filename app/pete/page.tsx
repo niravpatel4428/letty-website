@@ -2,7 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner';
 import WhereYouWork from '../components/WhereYouWork';
 import ManageProperty from '../components/ManageProperty';
-import TicketPropertys from '../components/TicketPropertys';
+import TicketProperties from '../components/TicketProperties';
 import TicketResolution from '../components/TicketResolution';
 import EveryPropertyTicket from '../components/EveryPropertyTicket';
 import ResultsSpeak from '../components/ResultsSpeak';
@@ -103,12 +103,90 @@ const page = () => {
                     { src: "/images/pete-work-logo7.svg", width: 99, height: 25 },
                 ]}
             />
-            <ManageProperty/>
-            <TicketPropertys/>
-            <TicketResolution/>
-            <EveryPropertyTicket/>
-            <ResultsSpeak/>
-            {/* <YourTeamTickets/> */}
+            <ManageProperty
+                title = "Your PMs don’t manage properties. They manage"
+                highlightedText = "chaos"
+                highlightClassName = "text-orange!"
+
+                description = "Think about what your property managers actually do all day. They’re not building landlord relationships. They’re not improving tenant retention. They’re answering the same questions, chasing the same contractors, playing middleman between tenants who want answers and landlords who want updates."
+
+                imageSrc = "/images/manage-property-img.png"
+                imageAlt = "Property management illustration showing chaos management"
+                imageWidth = {612}
+                imageHeight = {450}
+
+                textColumnClass = "xl:flex-1 lg:w-1/2 xl:w-full"
+                imageColumnClass = "lg:w-1/2 xl:w-153"
+            />
+            <TicketProperties
+                title="Pete handles the tickets. Your PMs handle the properties"
+                description = "Pete sits between tenants, contractors, and landlords. Triages every issue. Resolves what he can. Coordinates what he can't. Your PM only steps in when there's a decision to make."
+
+                mainImageSrc = "/images/ticket-property-img.png"
+                mainImageAlt = "Property management illustration showing chaos management"
+                mainImageWidth = {612}
+                mainImageHeight = {450}
+
+                stepsImageSrc = "/images/ticket-property-steps-img.png"
+                stepsImageAlt = "Ticket handling steps illustration"
+                stepsImageWidth = {640}
+                stepsImageHeight = {84}
+
+                textColumnClass = "xl:flex-1 lg:w-1/2 xl:w-full"
+                imageColumnClass = "lg:w-1/2 xl:w-153"
+            />
+            <TicketResolution
+                title = "From ticket to resolution. Handled"
+
+                diagramImageSrc = "/images/ticket-resolution-diagram3.png"
+                diagramImageAlt = "ticket-resolution-diagram"
+                diagramImageWidth = {828}
+                diagramImageHeight = {460}
+
+                backgroundImage = "/images/ticket-resolution-bg.png"
+
+                glowColorClass = "bg-orange"
+                glowSizeClass = "w-58 h-58"
+                glowBlur = {350}
+            />
+            {/* <EveryPropertyTicket/> */}
+            <EveryPropertyTicket
+                title="See every property. Without checking every ticket"
+                points={[
+                    "Every issue logged and categorised",
+                    "Every response time tracked",
+                    "Every contractor coordinated",
+                    "Every cost visible",
+                    "PMs only flagged when needed",
+                ]}
+
+                imageSrc = "/images/every-property-ticket-img.png"
+                imageAlt = "Property management illustration showing chaos management"
+                imageWidth = {612}
+                imageHeight = {450}
+            />
+            <ResultsSpeak
+                title="The results speak for themselves"
+                stats={[
+                    { suffix: "40–50%", text: "of tickets resolved without human touch" },
+                    { suffix: "3+ hours", text: "saved per PM per day" },
+                    { suffix: "Minutes", text: "average response time" },
+                    { suffix: "£0", text: "additional headcount to scale" },
+                ]}
+
+                buttonText = "Unlock your potential"
+                buttonLink = "#"
+                buttonClassName = "btn btn-large btn-white btn-rounded-xl"
+
+                quote = '"We manage 300 more units than last year with the same team. Pete handles everything tenants used to call us about."'
+                directorName = "Operations Director, Winkworth"
+                directorImageSrc = "/images/director-icon.png"
+                directorImageAlt = "director-icon"
+
+                quoteMaxWidthClass = "max-w-160"
+
+                statsItemClass = "xs:w-1/2 md:w-1/3 xl:w-1/4"
+            />
             <YourTeamTickets
                 heading={yourTeamTicketsSection.heading}
                 description={yourTeamTicketsSection.description}
@@ -125,7 +203,6 @@ const page = () => {
                 description="Pete plugs into the property management systems and channels you already use. No IT project. Up and running in a week."
                 contentMaxWidth="max-w-full"
             />
-            {/* <TicketsHandleYou/> */}
             <TicketsHandleYou
                 title="See how many tickets Pete could handle for you"
                 description="Book 15 minutes. We'll show you the revenue you're missing."

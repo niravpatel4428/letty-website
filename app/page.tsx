@@ -4,7 +4,7 @@ import HumanWork from "./components/HumanWork";
 import AgentTeam from "./components/AgentTeam";
 import FutureEmployees from "./components/FutureEmployees";
 import EnquiryRevenue from "./components/EnquiryRevenue";
-import DoublingHeadcount from "./components/DoublingHeadcount";
+import ResultsSpeak from "./components/ResultsSpeak";
 import ClientsLive from "./components/ClientsLive";
 import ExistingTools from "./components/ExistingTools";
 import QuestionAnswered from "./components/QuestionAnswered";
@@ -30,7 +30,28 @@ export default function Home() {
       <AgentTeam />
       <FutureEmployees />
       <EnquiryRevenue />
-      <DoublingHeadcount />
+      <ResultsSpeak
+          title="It’s like doubling your headcount"
+          subtitle="Without doubling your cost."
+          stats={[
+              { suffix: "90%+", text: "enquiries converted to viewings in under an hour" },
+              { suffix: "25+", text: "new landlord and vendor instructions captured automatically every month" },
+              { suffix: "3", text: "Lorem ipsum dolor sit amet, consectetur adipiscing" },
+          ]}
+
+          buttonText = "Unlock your potential"
+          buttonLink = "#"
+          buttonClassName = "btn btn-large btn-white btn-rounded-xl"
+
+          quote = '"We manage 300 more units than last year with the same team. Pete handles everything tenants used to call us about."'
+          directorName = "Operations Director, Winkworth"
+          directorImageSrc = "/images/director-icon.png"
+          directorImageAlt = "director-icon"
+
+          quoteMaxWidthClass = "max-w-200"
+
+          statsItemClass = "xs:w-1/2 md:w-1/3"
+      />
       <ClientsLive />
       <ExistingTools
         title="Integrates with your existing tools"
