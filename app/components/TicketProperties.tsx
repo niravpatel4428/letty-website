@@ -20,6 +20,8 @@ type TicketPropertiesProps = {
 
   textColumnClass?: string;
   imageColumnClass?: string;
+
+  bgClass?: string;
 };
 
 /* =========================
@@ -41,9 +43,11 @@ const TicketProperties = ({
 
   textColumnClass = "",
   imageColumnClass = "",
+  bgClass = "",
 }: TicketPropertiesProps) => {
     return (
-        <div className="block py-12 md:py-18 xl:py-25 bg-titan-white200">
+        // <div className="block py-12 md:py-18 xl:py-25 bg-titan-white200">
+        <div className={`block py-12 md:py-18 xl:py-25 ${bgClass}`}>
             <div className="container">
                 <div className="block">
                     <div className="flex flex-wrap items-center -mx-4">

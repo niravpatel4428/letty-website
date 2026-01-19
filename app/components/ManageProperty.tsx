@@ -9,7 +9,7 @@ type ManagePropertyProps = {
   highlightedText?: string;
   highlightClassName?: string;
 
-  description?: string;
+  description?: string[];
 
   imageSrc?: string;
   imageAlt?: string;
@@ -28,7 +28,7 @@ const ManageProperty = ({
   highlightedText = "",
   highlightClassName = "",
 
-  description = "",
+  description = [],
 
   imageSrc = "",
   imageAlt = "",
@@ -50,8 +50,10 @@ const ManageProperty = ({
                                     <h2>{title}{" "} <strong className={highlightClassName}>{highlightedText}</strong></h2>
                                 </div>
 
-                                <div className="block">
-                                    <p>{description}</p>
+                                <div className="block space-y-3">
+                                    {description.map((para, index) => (
+                                        <p key={index}>{para}</p>
+                                    ))}
                                 </div>
                             </div>
                         </div>

@@ -11,70 +11,6 @@ import JoinsChanges from '../components/JoinsChanges';
 import ExistingTools from '../components/ExistingTools';
 import TicketsHandleYou from '../components/TicketsHandleYou';
 
-export const yourTeamTicketsSection = {
-  id: "your-team-tickets",
-
-  heading: "The tickets your team shouldn't be handling",
-
-  description: "Pete doesn't just log issues. He resolves them.",
-
-  cards: [
-    {
-      title: "TriageAI",
-      description:
-        "Every issue gets categorised instantly. No heat in winter? Emergency. Squeaky door? Scheduled. Pete knows the difference and acts on it.",
-      image: "/images/your-team-img1.png",
-      alt: "TriageAI ticket handling",
-    },
-    {
-      title: "ResolutionAI",
-      description:
-        "40% of issues don't need a contractor. Boiler pressure low? Pete sends the fix. Smoke alarm beeping? Pete walks them through it. Resolved in minutes, not days.",
-      image: "/images/your-team-img2.png",
-      alt: "ResolutionAI ticket handling",
-    },
-    {
-      title: "ContractorAI",
-      description:
-        "For issues that need a professional, Pete collects the details, checks landlord spend limits, contacts approved contractors, books the appointment, and confirms with the tenant.",
-      image: "/images/your-team-img3.png",
-      alt: "ContractorAI ticket handling",
-    },
-    {
-      title: "CommsAI",
-      description:
-        "Tenants want updates. Landlords want to know what's happening. Pete keeps everyone informed. No one chases your PM because they already know.",
-      image: "/images/your-team-img4.png",
-      alt: "CommsAI communication flow",
-    },
-  ],
-};
-
-
-export const joinsChangesSection = {
-  id: "joins-changes",
-
-  heading: "What changes when Pete joins",
-
-  description:
-    "See how Pete transforms scattered, manual work into a clear and controlled workflow.",
-
-  blocks: [
-    {
-      title: "Before",
-      highlight: "Pete",
-      image: "/images/joins-changes-pete-img1.png",
-      alt: "Before Pete workflow",
-    },
-    {
-      title: "After",
-      highlight: "Pete",
-      image: "/images/joins-changes-pete-img2.png",
-      alt: "After Pete workflow",
-    },
-  ],
-};
-
 
 const page = () => {
     return (
@@ -108,7 +44,9 @@ const page = () => {
                 highlightedText = "chaos"
                 highlightClassName = "text-orange!"
 
-                description = "Think about what your property managers actually do all day. They’re not building landlord relationships. They’re not improving tenant retention. They’re answering the same questions, chasing the same contractors, playing middleman between tenants who want answers and landlords who want updates."
+                description={[
+                  "Think about what your property managers actually do all day. They’re not building landlord relationships. They’re not improving tenant retention. They’re answering the same questions, chasing the same contractors, playing middleman between tenants who want answers and landlords who want updates.",
+                ]}
 
                 imageSrc = "/images/manage-property-img.png"
                 imageAlt = "Property management illustration showing chaos management"
@@ -116,54 +54,56 @@ const page = () => {
                 imageHeight = {450}
 
                 textColumnClass = "xl:flex-1 lg:w-1/2 xl:w-full"
-                imageColumnClass = "lg:w-1/2 xl:w-153"
+                imageColumnClass = "lg:w-1/2 xl:w-161"
             />
             <TicketProperties
-                title="Pete handles the tickets. Your PMs handle the properties"
-                description = "Pete sits between tenants, contractors, and landlords. Triages every issue. Resolves what he can. Coordinates what he can't. Your PM only steps in when there's a decision to make."
+              bgClass="bg-titan-white200"
+              title="Pete handles the tickets. Your PMs handle the properties"
+              description = "Pete sits between tenants, contractors, and landlords. Triages every issue. Resolves what he can. Coordinates what he can't. Your PM only steps in when there's a decision to make."
 
-                mainImageSrc = "/images/ticket-property-img.png"
-                mainImageAlt = "Property management illustration showing chaos management"
-                mainImageWidth = {612}
-                mainImageHeight = {450}
+              mainImageSrc = "/images/ticket-property-img.png"
+              mainImageAlt = "Property management illustration showing chaos management"
+              mainImageWidth = {612}
+              mainImageHeight = {450}
 
-                stepsImageSrc = "/images/ticket-property-steps-img.png"
-                stepsImageAlt = "Ticket handling steps illustration"
-                stepsImageWidth = {640}
-                stepsImageHeight = {84}
+              stepsImageSrc = "/images/ticket-property-steps-img.png"
+              stepsImageAlt = "Ticket handling steps illustration"
+              stepsImageWidth = {640}
+              stepsImageHeight = {84}
 
-                textColumnClass = "xl:flex-1 lg:w-1/2 xl:w-full"
-                imageColumnClass = "lg:w-1/2 xl:w-153"
+              textColumnClass = "xl:flex-1 lg:w-1/2 xl:w-full"
+              imageColumnClass = "lg:w-1/2 xl:w-161"
             />
             <TicketResolution
-                title = "From ticket to resolution. Handled"
+              title = "From ticket to resolution. Handled"
 
-                diagramImageSrc = "/images/ticket-resolution-diagram3.png"
-                diagramImageAlt = "ticket-resolution-diagram"
-                diagramImageWidth = {828}
-                diagramImageHeight = {460}
+              diagramImageSrc = "/images/ticket-resolution-diagram3.png"
+              diagramImageAlt = "ticket-resolution-diagram"
+              diagramImageWidth = {828}
+              diagramImageHeight = {460}
 
-                backgroundImage = "/images/ticket-resolution-bg.png"
+              backgroundImage = "/images/ticket-resolution-bg.png"
 
-                glowColorClass = "bg-orange"
-                glowSizeClass = "w-58 h-58"
-                glowBlur = {350}
+              glowColorClass = "bg-orange"
+              glowSizeClass = "w-58 h-58"
+              glowBlur = {350}
             />
-            {/* <EveryPropertyTicket/> */}
             <EveryPropertyTicket
-                title="See every property. Without checking every ticket"
-                points={[
-                    "Every issue logged and categorised",
-                    "Every response time tracked",
-                    "Every contractor coordinated",
-                    "Every cost visible",
-                    "PMs only flagged when needed",
-                ]}
-
-                imageSrc = "/images/every-property-ticket-img.png"
-                imageAlt = "Property management illustration showing chaos management"
-                imageWidth = {612}
-                imageHeight = {450}
+              titleParts={[
+                { text: "See every property. Without checking every ticket" },
+              ]}
+              points={[
+                "Every issue logged and categorised",
+                "Every response time tracked",
+                "Every contractor coordinated",
+                "Every cost visible",
+                "PMs only flagged when needed",
+              ]}
+              checklistClass="orange-checkmark"
+              imageSrc = "/images/every-property-ticket-img.png"
+              imageAlt = "Property management illustration showing chaos management"
+              imageWidth = {612}
+              imageHeight = {450}
             />
             <ResultsSpeak
                 title="The results speak for themselves"
@@ -183,19 +123,75 @@ const page = () => {
                 directorImageSrc = "/images/director-icon.png"
                 directorImageAlt = "director-icon"
 
-                quoteMaxWidthClass = "max-w-160"
+                quoteMaxWidthClass = "max-w-164"
 
                 statsItemClass = "xs:w-1/2 md:w-1/3 xl:w-1/4"
             />
             <YourTeamTickets
-                heading={yourTeamTicketsSection.heading}
-                description={yourTeamTicketsSection.description}
-                cards={yourTeamTicketsSection.cards}
+              heading="The tickets your team shouldn't be handling"
+              description={[
+                "Pete doesn't just log issues. He resolves them."
+              ]}
+              cards={[
+                {
+                  title: "TriageAI",
+                  description: [
+                    "Every issue gets categorised instantly. No heat in winter? Emergency. Squeaky door? Scheduled. Pete knows the difference and acts on it."
+                  ],
+                  image: "/images/your-team-img1.png",
+                  alt: "Your Team Image",
+                },
+                {
+                  title: "ResolutionAI",
+                  description: [
+                    "40% of issues don't need a contractor. Boiler pressure low? Pete sends the fix. Smoke alarm beeping? Pete walks them through it. Resolved in minutes, not days."
+                  ],
+                  image: "/images/your-team-img2.png",
+                  alt: "Your Team Image",
+                },
+                {
+                  title: "ContractorAI",
+                  description: [
+                    "For issues that need a professional, Pete collects the details, checks landlord spend limits, contacts approved contractors, books the appointment, and confirms with the tenant."
+                  ],
+                  image: "/images/your-team-img3.png",
+                  alt: "Your Team Image",
+                },
+                {
+                  title: "CommsAI",
+                  description: [
+                    "Tenants want updates. Landlords want to know what's happening. Pete keeps everyone informed. No one chases your PM because they already know."
+                  ],
+                  image: "/images/your-team-img4.png",
+                  alt: "Your Team Image",
+                }
+              ]}
             />
             <JoinsChanges
-                heading={joinsChangesSection.heading}
-                description={joinsChangesSection.description}
-                blocks={joinsChangesSection.blocks}
+              heading="What changes when Pete joins"
+              description={[
+                "See how Pete transforms scattered, manual work into a clear and controlled workflow."
+              ]}
+              blocks={[
+                {
+                  title: "Before",
+                  highlight: "Pete",
+                  highlightClass: "text-orange!",
+                  image: "/images/joins-changes-pete-img1.png",
+                  alt: "joins-changes-pete-img",
+                  imageWidth: 627,
+                  imageHeight: 375,
+                },
+                {
+                  title: "After",
+                  highlight: "Pete",
+                  highlightClass: "text-orange!",
+                  image: "/images/joins-changes-pete-img2.png",
+                  alt: "joins-changes-pete-img",
+                  imageWidth: 627,
+                  imageHeight: 375,
+                }
+              ]}
             />
             <ExistingTools
                 title="Live in days. Not months"
