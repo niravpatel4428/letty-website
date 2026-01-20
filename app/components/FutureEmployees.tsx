@@ -123,9 +123,12 @@ const FutureEmployees = () => {
                                                 </div>
 
                                                 {/* How I Work */}
-                                                <div className="block bg-white shadow-[0px_12.5px_11.8421px_rgba(34,25,69,0.03)] mt-6 md:mt-10 xl:mt-19 mx-auto lg:mx-0 max-w-75 w-full rounded-xl p-3.5">
+                                                <div className="block space-y-4.5 bg-white shadow-[0px_12.5px_11.8421px_rgba(34,25,69,0.03)] mt-6 md:mt-10 xl:mt-19 mx-auto lg:mx-0 max-w-75 w-full rounded-xl p-3.5">
                                                     <div className="block text-center text-13 leading-snug text-black600">
                                                         <p>Want to hear how I work? </p>
+                                                    </div>
+                                                    <div className="block">
+                                                        <Image src='/images/nancy-audio-player.png' alt='audio-player' width={274} height={36} className='max-w-full' />
                                                     </div>
                                                 </div>
                                                 {/* How I Work */}
@@ -176,9 +179,12 @@ const FutureEmployees = () => {
                                                 </div>
 
                                                 {/* How I Work */}
-                                                <div className="block bg-white shadow-[0px_12.5px_11.8421px_rgba(34,25,69,0.03)] mt-6 md:mt-10 xl:mt-19 mx-auto lg:mx-0 max-w-75 w-full rounded-xl p-3.5">
+                                                <div className="block space-y-4.5 bg-white shadow-[0px_12.5px_11.8421px_rgba(34,25,69,0.03)] mt-6 md:mt-10 xl:mt-19 mx-auto lg:mx-0 max-w-75 w-full rounded-xl p-3.5">
                                                     <div className="block text-center text-13 leading-snug text-black600">
                                                         <p>Want to hear how I work? </p>
+                                                    </div>
+                                                    <div className="block">
+                                                        <Image src='/images/pete-audio-player.png' alt='audio-player' width={274} height={36} className='max-w-full' />
                                                     </div>
                                                 </div>
                                                 {/* How I Work */}
@@ -207,7 +213,7 @@ const FutureEmployees = () => {
                                 </div>
 
                                 <div className="hidden lg:block lg:absolute left-0 right-0 bottom-0 text-center lg:h-100 xl:h-120">
-                                    <Image src="/images/property-manager-slide-img2.png" alt="property-manager-slide-img" width={674} height={753} className="max-w-full lg:max-w-100 xl:max-w-125 mx-auto" />
+                                    <Image src="/images/property-manager-slide-img2.png" alt="property-manager-slide-img" width={685} height={825} className="max-w-full lg:max-w-100 xl:max-w-175 mx-auto" />
                                 </div>
                             </div>
                             {/* future-employees-block */}
