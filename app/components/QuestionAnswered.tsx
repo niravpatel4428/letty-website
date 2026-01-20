@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
 /* =========================
@@ -34,6 +34,18 @@ const ClientReviewPrevArrow = (props: any) => {
 
 
 const QuestionAnswered = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkScreen = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+
+        checkScreen();
+        window.addEventListener("resize", checkScreen);
+        return () => window.removeEventListener("resize", checkScreen);
+    }, []);
+
     const tags = [
         { label: "I want to sell my house too", href: "#" },
         { label: "My shower is broken", href: "#" },
@@ -57,6 +69,30 @@ const QuestionAnswered = () => {
         { label: "I'm locked out", href: "#" },
         { label: "Can you recommend a solicitor?", href: "#" },
     ];
+
+    const tagSliderSettings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 10000,
+        cssEase: "linear",
+        slidesToShow: 1,
+        // slidesToScroll: 1,
+        variableWidth: true,
+        // swipeToSlide: true,
+        pauseOnHover: false,
+        // responsive: [
+        //     {
+        //         breakpoint: 640,
+        //         settings: {
+        //             slidesToShow: 1.3,
+        //         },
+        //     },
+        // ],
+    };
+
     const sliderSettings = {
         dots: false,
         arrows: true,
@@ -72,7 +108,7 @@ const QuestionAnswered = () => {
         <>
             <div className="block py-8 lg:py-10 xl:py-14">
                 <div className="container">
-                    <div className="block space-y-8 lg:space-y-10 xxl:space-y-15.5 bg-titan-white200 rounded-3xl md:rounded-4xl lg:rounded-50 xl:rounded-80 px-4 md:py-10 lg:py-15 lg:px-10 xxl:p-20">
+                    <div className="block space-y-8 lg:space-y-10 xxl:space-y-15.5 bg-titan-white200 rounded-3xl md:rounded-4xl lg:rounded-50 xl:rounded-80 px-4 py-6 md:py-10 lg:py-15 lg:px-10 xxl:p-20">
                         <div className="block md:px-4 lg:px-8 xxl:px-15.5">
                             <div className="flex flex-wrap items-center -mx-4">
                                 <div className="flex-none w-full lg:flex-1 px-4">
@@ -86,7 +122,7 @@ const QuestionAnswered = () => {
                                         </div>
 
                                         <div className="flex flex-wrap -mx-3">
-                                            <div className="flex-none w-full sm:w-1/2 px-3">
+                                            <div className="flex-none w-full xs:w-1/2 px-3 mb-6">
                                                 <div className="block space-y-3">
                                                     <div className="section-title">
                                                         <span>+3</span>
@@ -97,7 +133,7 @@ const QuestionAnswered = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="flex-none w-full sm:w-1/2 px-3">
+                                            <div className="flex-none w-full xs:w-1/2 px-3 mb-6">
                                                 <div className="block space-y-3">
                                                     <div className="section-title">
                                                         <span>$500</span>
@@ -186,15 +222,27 @@ const QuestionAnswered = () => {
 
                         <div className="block">
                             {/* Tags List */}
-                            <ul className="flex flex-wrap justify-center gap-2 list-none font-geist font-medium lg:text-lg xxl:text-xl leading-tight">
-                                {tags.map((tag, index) => (
-                                <li key={index}>
-                                    <Link href={tag.href} className="inline-block py-1 px-3 text-white bg-black300 rounded-md hover:bg-orange transition">
-                                        {tag.label}
-                                    </Link>
-                                </li>
-                                ))}
-                            </ul>
+                            {isMobile ? (
+                                <Slider {...tagSliderSettings} className="tags-slider">
+                                    {tags.map((tag, index) => (
+                                        <div key={index} className="px-1">
+                                            <Link href={tag.href} className="block text-center py-1 px-3 text-white bg-black300 rounded-md hover:bg-orange transition">
+                                                {tag.label}
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </Slider>
+                            ) : (
+                                <ul className="flex flex-wrap justify-center gap-2 list-none font-geist font-medium lg:text-lg xxl:text-xl">
+                                    {tags.map((tag, index) => (
+                                        <li key={index}>
+                                            <Link href={tag.href} className="inline-block py-1 px-3 text-white bg-black300 rounded-md hover:bg-orange transition">
+                                                {tag.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                             {/* Tags List */}
                         </div>
                     </div>
