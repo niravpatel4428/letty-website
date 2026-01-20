@@ -220,10 +220,10 @@ const QuestionAnswered = () => {
                             </div>
                         </div>
 
-                        <div className="block">
+                        <div className="block tags-slider">
                             {/* Tags List */}
                             {isMobile ? (
-                                <Slider {...tagSliderSettings} className="tags-slider">
+                                <Slider {...tagSliderSettings} className="tags-carousel">
                                     {tags.map((tag, index) => (
                                         <div key={index} className="px-1">
                                             <Link href={tag.href} className="block text-center py-1 px-3 text-white bg-black300 rounded-md hover:bg-orange transition">
