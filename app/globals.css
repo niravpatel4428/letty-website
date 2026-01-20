@@ -16,6 +16,7 @@
   --titan-white400: #CCCCE9;
   --titan-white500: #F5F5F5;
   --titan-white600: #F1F1F1;
+  --titan-white700: #DFE5F3;
   --salomie: #FFD88D;
   --orange: #FF6B46;
   --purple: #7350FF;
@@ -40,6 +41,7 @@
   --color-titan-white400: var(--titan-white400);
   --color-titan-white500: var(--titan-white500);
   --color-titan-white600: var(--titan-white600);
+  --color-titan-white700: var(--titan-white700);
   --color-salomie: var(--salomie);
   --color-orange: var(--orange);
   --color-purple: var(--purple);
@@ -390,3 +392,31 @@ ul li {
 .future-employees-carousel .slick-dots { padding-top: 30px; }
 }
 /* future-employees-carousel */
+
+/* audio wave animation */
+.waveform span {
+  width: 4px;
+  height: 10px;
+  animation-play-state: paused;
+  animation: wave 1.2s infinite ease-in-out;
+  -webkit-animation: wave 1.2s infinite ease-in-out;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.waveform span:nth-child(n) {
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes wave {
+  0%, 100% {
+    height: 10px;
+  }
+  50% {
+    height: 30px;
+  }
+}
+/* audio wave animation */

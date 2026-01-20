@@ -1,8 +1,10 @@
 "use client";
 
+import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 
 /* =========================
@@ -43,6 +45,25 @@ const FutureEmployeesPrevArrow = (props: any) => {
 };
 
 const FutureEmployees = () => {
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const togglePlay = () => {
+        if (!audioRef.current) return;
+
+        if (isPlaying) {
+        audioRef.current.pause();
+            setIsPlaying(false);
+        } else {
+        audioRef.current.play();
+            setIsPlaying(true);
+        }
+    };
+
+    const handleEnded = () => {
+        setIsPlaying(false);
+    };
+
     const sliderSettings = {
         dots: true,
         arrows: true,
@@ -128,7 +149,34 @@ const FutureEmployees = () => {
                                                         <p>Want to hear how I work? </p>
                                                     </div>
                                                     <div className="block">
-                                                        <Image src='/images/nancy-audio-player.png' alt='audio-player' width={274} height={36} className='max-w-full' />
+                                                        {/* ===== AUDIO PLAYER (DIVS PRESERVED) ===== */}
+                                                        <div className="block" onContextMenu={(e) => e.preventDefault()} >
+                                                            <div className="audio-player flex gap-2.5 items-center overflow-hidden">
+                                                                <div className="block">
+                                                                    <button onClick={togglePlay} className="flex-none cursor-pointer inline-flex items-center justify-center text-13 w-8 h-8 text-black border-4 border-titan-white700 rounded-full">
+                                                                        {isPlaying ? (
+                                                                            <FontAwesomeIcon icon={faPause} />
+                                                                        ) : (
+                                                                            <FontAwesomeIcon icon={faPlay} />
+                                                                        )}
+                                                                    </button>
+                                                                </div>
+
+                                                                <div className="block flex-1">
+                                                                    <div className="waveform flex items-center gap-1">
+                                                                    {[...Array(50)].map((_, i) => (
+                                                                        <span key={i} className={`${ i % 2 === 0 ? "bg-purple" : "bg-titan-white700" }`} style={{ animationPlayState: isPlaying ? "running" : "paused", }} />
+                                                                    ))}
+                                                                    </div>
+                                                                </div>
+
+                                                                <div className="block">
+                                                                    <audio ref={audioRef} loop preload="none" >
+                                                                        <source src="/images/audio.mp3" type="audio/mpeg" />
+                                                                    </audio>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 {/* How I Work */}
@@ -183,8 +231,33 @@ const FutureEmployees = () => {
                                                     <div className="block text-center text-13 leading-snug text-black600">
                                                         <p>Want to hear how I work? </p>
                                                     </div>
-                                                    <div className="block">
-                                                        <Image src='/images/pete-audio-player.png' alt='audio-player' width={274} height={36} className='max-w-full' />
+                                                    {/* ===== AUDIO PLAYER (DIVS PRESERVED) ===== */}
+                                                    <div className="block" onContextMenu={(e) => e.preventDefault()} >
+                                                        <div className="audio-player flex gap-2.5 items-center overflow-hidden">
+                                                            <div className="block">
+                                                                <button onClick={togglePlay} className="flex-none cursor-pointer inline-flex items-center justify-center text-13 w-8 h-8 text-black border-4 border-titan-white700 rounded-full">
+                                                                    {isPlaying ? (
+                                                                        <FontAwesomeIcon icon={faPause} />
+                                                                    ) : (
+                                                                        <FontAwesomeIcon icon={faPlay} />
+                                                                    )}
+                                                                </button>
+                                                            </div>
+
+                                                            <div className="block flex-1">
+                                                                <div className="waveform flex items-center gap-1">
+                                                                {[...Array(50)].map((_, i) => (
+                                                                    <span key={i} className={`${ i % 2 === 0 ? "bg-orange" : "bg-titan-white700" }`} style={{ animationPlayState: isPlaying ? "running" : "paused", }} />
+                                                                ))}
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="block">
+                                                                <audio ref={audioRef} loop preload="none" >
+                                                                    <source src="/images/audio.mp3" type="audio/mpeg" />
+                                                                </audio>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 {/* How I Work */}
