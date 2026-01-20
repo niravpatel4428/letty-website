@@ -45,23 +45,33 @@ const FutureEmployeesPrevArrow = (props: any) => {
 };
 
 const FutureEmployees = () => {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRefs = useRef<HTMLAudioElement[]>([]);
+    const [activeAudio, setActiveAudio] = useState<number | null>(null);
 
-    const togglePlay = () => {
-        if (!audioRef.current) return;
+    /* =========================
+        Play / Pause Logic
+    ========================= */
+    const togglePlay = (index: number) => {
+        const currentAudio = audioRefs.current[index];
+        if (!currentAudio) return;
 
-        if (isPlaying) {
-        audioRef.current.pause();
-            setIsPlaying(false);
-        } else {
-        audioRef.current.play();
-            setIsPlaying(true);
+        // Stop all other audios
+        audioRefs.current.forEach((audio, i) => {
+        if (audio && i !== index) {
+            audio.pause();
+            audio.currentTime = 0;
         }
-    };
+        });
 
-    const handleEnded = () => {
-        setIsPlaying(false);
+        // Toggle current audio
+        if (activeAudio === index) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            setActiveAudio(null);
+        } else {
+            currentAudio.play();
+            setActiveAudio(index);
+        }
     };
 
     const sliderSettings = {
@@ -75,6 +85,15 @@ const FutureEmployees = () => {
         centerPadding: "61px",
         nextArrow: <FutureEmployeesNextArrow />,
         prevArrow: <FutureEmployeesPrevArrow />,
+        beforeChange: () => {
+            audioRefs.current.forEach((audio) => {
+                if (audio) {
+                audio.pause();
+                audio.currentTime = 0;
+                }
+            });
+            setActiveAudio(null);
+        },
         responsive: [
             {
             breakpoint: 1025,
@@ -153,25 +172,21 @@ const FutureEmployees = () => {
                                                         <div className="block" onContextMenu={(e) => e.preventDefault()} >
                                                             <div className="audio-player flex gap-2.5 items-center overflow-hidden">
                                                                 <div className="block">
-                                                                    <button onClick={togglePlay} className="flex-none cursor-pointer inline-flex items-center justify-center text-13 w-8 h-8 text-black border-4 border-titan-white700 rounded-full">
-                                                                        {isPlaying ? (
-                                                                            <FontAwesomeIcon icon={faPause} />
-                                                                        ) : (
-                                                                            <FontAwesomeIcon icon={faPlay} />
-                                                                        )}
+                                                                    <button onClick={() => togglePlay(0)} className="flex-none cursor-pointer inline-flex items-center justify-center text-13 w-8 h-8 text-black border-4 border-titan-white700 rounded-full">
+                                                                        {activeAudio === 0 ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
                                                                     </button>
                                                                 </div>
 
                                                                 <div className="block flex-1">
                                                                     <div className="waveform flex items-center gap-1">
                                                                     {[...Array(50)].map((_, i) => (
-                                                                        <span key={i} className={`${ i % 2 === 0 ? "bg-purple" : "bg-titan-white700" }`} style={{ animationPlayState: isPlaying ? "running" : "paused", }} />
+                                                                        <span key={i} className={i % 2 === 0 ? "bg-purple" : "bg-gray-300"} style={{ animationPlayState: activeAudio === 0 ? "running" : "paused" }} />
                                                                     ))}
                                                                     </div>
                                                                 </div>
 
                                                                 <div className="block">
-                                                                    <audio ref={audioRef} loop preload="none" >
+                                                                    <audio ref={(el) => { if (el) audioRefs.current[0] = el; }} preload="none">
                                                                         <source src="/images/audio.mp3" type="audio/mpeg" />
                                                                     </audio>
                                                                 </div>
@@ -235,25 +250,21 @@ const FutureEmployees = () => {
                                                     <div className="block" onContextMenu={(e) => e.preventDefault()} >
                                                         <div className="audio-player flex gap-2.5 items-center overflow-hidden">
                                                             <div className="block">
-                                                                <button onClick={togglePlay} className="flex-none cursor-pointer inline-flex items-center justify-center text-13 w-8 h-8 text-black border-4 border-titan-white700 rounded-full">
-                                                                    {isPlaying ? (
-                                                                        <FontAwesomeIcon icon={faPause} />
-                                                                    ) : (
-                                                                        <FontAwesomeIcon icon={faPlay} />
-                                                                    )}
+                                                                <button onClick={() => togglePlay(1)} className="flex-none cursor-pointer inline-flex items-center justify-center text-13 w-8 h-8 text-black border-4 border-titan-white700 rounded-full">
+                                                                    {activeAudio === 1 ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
                                                                 </button>
                                                             </div>
 
                                                             <div className="block flex-1">
                                                                 <div className="waveform flex items-center gap-1">
                                                                 {[...Array(50)].map((_, i) => (
-                                                                    <span key={i} className={`${ i % 2 === 0 ? "bg-orange" : "bg-titan-white700" }`} style={{ animationPlayState: isPlaying ? "running" : "paused", }} />
+                                                                    <span key={i} className={i % 2 === 0 ? "bg-orange" : "bg-gray-300"} style={{ animationPlayState: activeAudio === 1 ? "running" : "paused" }} />
                                                                 ))}
                                                                 </div>
                                                             </div>
 
                                                             <div className="block">
-                                                                <audio ref={audioRef} loop preload="none" >
+                                                                <audio ref={(el) => { if (el) audioRefs.current[1] = el; }} preload="none">
                                                                     <source src="/images/audio.mp3" type="audio/mpeg" />
                                                                 </audio>
                                                             </div>
