@@ -393,6 +393,87 @@ ul li {
 }
 /* future-employees-carousel */
 
+/* your-team-carousel */
+.your-team-carousel {
+  opacity: 0;
+}
+
+.your-team-carousel.slick-initialized {
+  opacity: 1;
+}
+
+.your-team-carousel .slick-dots {
+  display: block;
+  margin: 15px 0 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.your-team-carousel .slick-dots li {
+  display: inline-block;
+  margin: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.your-team-carousel .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.your-team-carousel .slick-dots li button:before {
+  position: relative;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--titan-white400);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.your-team-carousel .slick-dots li.slick-active button {
+  border-color: var(--purple);
+}
+
+.your-team-carousel .slick-dots li.slick-active button:before {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.your-team-carousel .slick-track {
+  display: flex;
+  justify-content: center;
+}
+
+.your-team-carousel .slick-list {
+  margin: 0 -12px;
+}
+
+.your-team-carousel .slick-slide {
+  height: inherit;
+}
+
+.your-team-carousel .slick-slide > div {
+  height: 100%;
+}
+/* your-team-carousel */
+
 /* audio wave animation */
 .waveform span {
   width: 4px;

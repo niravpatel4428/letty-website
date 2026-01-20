@@ -38,9 +38,9 @@ const JoinsChanges = ({ heading, description = [], blocks }: JoinsChangesProps) 
 
                     {/* Blocks */}
                     <div className="block">
-                        <div className="flex flex-wrap -mx-3 lg:-mx-8">
+                        <div className="flex flex-wrap -mx-3 xl:-mx-8">
                         {blocks.map((item, index) => (
-                            <div key={index} className="flex-none w-full md:w-1/2 px-3 lg:px-8 mb-6">
+                            <div key={index} className="flex-none w-full md:w-1/2 px-3 xl:px-8 mb-6">
                                 <div className="flex flex-col h-full space-y-4 lg:space-y-8">
                                     
                                     {/* Block Title */}

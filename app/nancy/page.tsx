@@ -222,7 +222,7 @@ const page = () => {
                 imageHeight = {513}
 
                 textMaxWidthClass="lg:max-w-125 xl:max-w-150 xxl:max-w-157"
-                imageMaxWidthClass="lg:max-w-125 xxl:max-w-151 lg:-ml-23 xl:-ml-15 xxl:-ml-21.5"
+                imageMaxWidthClass="lg:max-w-125 xxl:max-w-151 lg:-ml-27 xl:-ml-15 xxl:-ml-21.5"
                 backgroundImage="/images/tickets-handle-purple-bg.png"
             />
         </main>

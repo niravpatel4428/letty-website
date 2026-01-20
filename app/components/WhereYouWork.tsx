@@ -49,7 +49,7 @@ const WhereYouWork = ({
             )}
 
             {/* Logos */}
-            <div className="block">
+            <div className="block overflow-hidden">
               <div className="flex flex-wrap items-center justify-center -mx-4 lg:-mx-6 xl:mx-8">
                 {logoList.map((logo, index) => (
                   <div key={index} className="flex-none px-4 lg:px-6 xl:px-8" >
