@@ -63,31 +63,15 @@ const EnquiryRevenue = () => {
                         <div className="block space-y-8 md:space-y-10 xl:space-y-15">
                             {/* Tabs List Item */}
                             <div className="block text-center">
-                                <ul className="inline-flex flex-wrap items-center justify-center p-1 border border-titan-white rounded-4xl">
-                                    <li>
-                                        <button
-                                            onClick={() => setActiveTab("sales")}
-                                            className={`cursor-pointer inline-flex items-center justify-center text-base py-2 md:py-4 px-5 md:px-7 rounded-full transition-all duration-300
-                                            ${
-                                                activeTab === "sales"
-                                                ? "text-white bg-purple"
-                                                : "hover:text-white hover:bg-purple"
-                                            }`}
-                                        >
+                                <ul className="inline-flex flex-wrap xs:items-center justify-center p-1 border border-titan-white rounded-4xl">
+                                    <li className="w-1/2 xs:w-auto">
+                                        <button onClick={() => setActiveTab("sales")} className={`cursor-pointer inline-flex h-full items-center justify-center text-13 xs:text-base leading-tight py-2 md:py-4 px-3 xs:px-5 md:px-7 w-full xs:w-auto rounded-full transition-all duration-300 ${ activeTab === "sales" ? "text-white bg-purple" : "hover:text-white hover:bg-purple" }`} >
                                             For sales teams
                                         </button>
                                     </li>
 
-                                    <li>
-                                        <button
-                                            onClick={() => setActiveTab("property")}
-                                            className={`cursor-pointer inline-flex items-center justify-center text-base py-2 md:py-4 px-5 md:px-7 rounded-full transition-all duration-300
-                                            ${
-                                                activeTab === "property"
-                                                ? "text-white bg-orange"
-                                                : "hover:text-white hover:bg-orange"
-                                            }`}
-                                        >
+                                    <li className="w-1/2 xs:w-auto">
+                                        <button onClick={() => setActiveTab("property")} className={`cursor-pointer inline-flex h-full items-center justify-center text-13 xs:text-base leading-tight py-2 md:py-4 px-3 xs:px-5 md:px-7 w-full xs:w-auto rounded-full transition-all duration-300 ${ activeTab === "property" ? "text-white bg-orange" : "hover:text-white hover:bg-orange" }`} >
                                             For property managers
                                         </button>
                                     </li>
@@ -194,7 +178,6 @@ const EnquiryRevenue = () => {
                                         </div>
                                     </div>
                                 )}
-
                             </div>
                         </div>
                         {/* Revenue Tabbing */}
